@@ -106,7 +106,7 @@ app.put('/api/suppliers/:id/new-order', async (req, res) => {
 const PORT = process.env.PORT || 5000; // 👈 Fixed: Define PORT properly
 
 // Serve Static Files from React
-app.use(express.static(path.join(__dirname, "../client/dist"))); 
+app.use(express.static(path.join(__dirname, "../client/build"))); 
 
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "../client/dist/index.html"));
